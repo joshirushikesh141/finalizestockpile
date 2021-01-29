@@ -56,7 +56,8 @@
 	max-width: 8%;
 }
 #adj {
-	justify-items: left;
+    justify-items: left;
+    padding-top: 1.5%;
 	color: white;
 	text-shadow: 2px 2px 4px #000000;
 
