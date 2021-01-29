@@ -2,7 +2,8 @@ import React from 'react';
 import './Heading.css';
 import './stylesheet.css';
 import './navbar.css';
-import './login.css';
+import './signup.css';
+import './styles.css';
 import collage from './cdac-image.jpg';
 import logo from './logo.png';
 import CDACicon from './CDAC-icon.jpg';
@@ -11,6 +12,7 @@ import linkedinicon from './linkedin-icon.png';
 import Logo from './avatar.png';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import { useState, useEffect } from "react";
+
 
 
 
@@ -40,7 +42,15 @@ function App() {
       </Route>
 
       <Route path="/AboutUs">
-           return <AboutUs />
+           <AboutUs />
+      </Route>
+
+      <Route path="/Login">
+           <Login />
+      </Route>
+
+      <Route path="/SignUp">
+           <SignUp />
       </Route>
       
   </Router>
@@ -76,8 +86,8 @@ function Homepage()
 
 
 
-  <div className="row container-fluid">
-    <div className="col-2 columnmodific">
+  <div className="container-fluid">
+    <div className="columnmodific">
 				<ol>
 						<li><a href="#Q1">Welcome To Module Question Bank.....</a></li>
 						<hr/>
@@ -94,12 +104,26 @@ function Homepage()
 						<img alt="cdac-linkedin" src={linkedinicon} width="10%" height="10%" style={{paddingLeft: '2%'}}/>						</a>
 
 				<hr/>
+            <button type="button" class="btn btn-primary" style={{marginRight:"3%"}}><Link to="/Login" style={{textDecoration:"none", color:"white"}}>Login</Link></button>
+            <button type="button" class="btn btn-secondary"><Link to="/SignUp" style={{textDecoration:"none", color:"white"}}>SignUp</Link></button>
+
+        <hr/>
 				</ol>
 		</div>
 	
-        <div className="col-10 add">
+        <div className="add">
           <div className="section">
                   <p>
+
+                          <h4 style={{color:'teal'}}>THE QUESTIONARY STOCKPILE</h4><hr/>
+                              The Questionary Stockpile website created as a miniproject by Mr.Rushikesh Joshi(200940581025) &
+                               Ms.Meghna Patil (200940381049) under the guidance of C-DAC Team- Mrs.Kiran Waghmare, Mrs.Nisha Karolia &
+                               Mr.Vipul Tembulwar. <br/><br/>
+
+
+
+
+
                           <h4 style={{color:'teal'}}>C-DAC MUMBAI</h4><hr/>
 
                           <img src={collage} style={{float: 'right', height: '28%', width: '36%', border: '4px outset'}} alt="collage" />
@@ -119,7 +143,7 @@ function Homepage()
          </div>
   </div>
             <footer>
-              <div class="row footer">
+              <div class="row footer" style={{marginLeft:"0%"}}>
                   <h6>Last Updated: Tuesday, January 12, 2021<br />
                     Centre for Development of Advanced Computing (C-DAC Mumbai)</h6>
               </div>
@@ -128,7 +152,6 @@ function Homepage()
       );
     }
  
-
 
 function Java()
 {
@@ -157,8 +180,8 @@ function Java()
 
 
 
-    <div className="row container-fluid">
-      <div className="col-2 columnmodific">
+    <div className="container-fluid">
+      <div className="columnmodific">
           <ol>
             <li><a href="#Q1">General Questions about Java</a></li>
 						<li><a href="#Q2">Java Threads</a></li>
@@ -179,10 +202,14 @@ function Java()
               <img alt="cdac-linkedin" src={linkedinicon} width="10%" height="10%" style={{paddingLeft: '2%'}}/>						</a>
 
           <hr/>
+          <button type="button" class="btn btn-primary" style={{marginRight:"3%"}}><Link to="/Login" style={{textDecoration:"none", color:"white"}}>Login</Link></button>
+            <button type="button" class="btn btn-secondary"><Link to="/SignUp" style={{textDecoration:"none", color:"white"}}>SignUp</Link></button>
+
+        <hr/>
           </ol>
       </div>
     
-          <div className="col-10" className="add">
+          <div className="add">
           <div class= "section">
 					<p>
 						<h3>General Questions about Java</h3><br/>
@@ -532,7 +559,7 @@ object is garbage collected.<br/><br/>
     </div>
     {/*====================================================================================================*/}
               <footer>
-                <div class="row footer">
+                <div class="row footer" style={{marginLeft:"0%"}}>
                     <h6>Last Updated: Tuesday, January 12, 2021<br />
                       Centre for Development of Advanced Computing (C-DAC Mumbai)</h6>
                 </div>
@@ -540,7 +567,6 @@ object is garbage collected.<br/><br/>
     </div>
         );
       }
-   
    
 
 function Database()
@@ -568,8 +594,8 @@ function Database()
 
 
 
-    <div className="row container-fluid">
-      <div className="col-2 columnmodific">
+    <div className="container-fluid">
+      <div className="columnmodific">
           <ol>
             <li><a href="#Q1">MySQL Practice Questions</a></li>
             <li><a href="#Q2">MySQL Interview Questions</a></li>
@@ -588,13 +614,17 @@ function Database()
               <img alt="cdac-linkedin" src={linkedinicon} width="10%" height="10%" style={{paddingLeft: '2%'}}/>						</a>
   
           <hr/>
+          <button type="button" class="btn btn-primary" style={{marginRight:"3%"}}><Link to="/Login" style={{textDecoration:"none", color:"white"}}>Login</Link></button>
+            <button type="button" class="btn btn-secondary"><Link to="/SignUp" style={{textDecoration:"none", color:"white"}}>SignUp</Link></button>
+
+        <hr/>
           </ol>
       </div>
 
 
 
 
-          <div className="col-10" className="add">
+          <div className="add">
           <div class= "section">
 <p>
 <h3>MySQL Practice Questions</h3><br/>
@@ -1436,7 +1466,7 @@ END;
     </div>
 
               <footer>
-                <div class="row footer">
+                <div class="row footer" style={{marginLeft:"0%"}}>
                     <h6>Last Updated: Tuesday, January 12, 2021<br />
                       Centre for Development of Advanced Computing (C-DAC Mumbai)</h6>
                 </div>
@@ -1476,8 +1506,8 @@ function WebTechnology()
 
 
 
-    <div className="row container-fluid">
-      <div className="col-2 columnmodific">
+    <div className="container-fluid">
+      <div className="columnmodific">
           <ol>
                         <li><a href="#Q1">HTML</a></li>
                         <li><a href="#Q2">CSS</a></li>
@@ -1496,6 +1526,10 @@ function WebTechnology()
               <img alt="cdac-linkedin" src={linkedinicon} width="10%" height="10%" style={{paddingLeft: '2%'}}/>						</a>
   
           <hr/>
+          <button type="button" class="btn btn-primary" style={{marginRight:"3%"}}><Link to="/Login" style={{textDecoration:"none", color:"white"}}>Login</Link></button>
+            <button type="button" class="btn btn-secondary"><Link to="/SignUp" style={{textDecoration:"none", color:"white"}}>SignUp</Link></button>
+
+        <hr/>
           </ol>
       </div>
    
@@ -1503,7 +1537,7 @@ function WebTechnology()
 
 
 
-          <div className="col-10" className="add">
+          <div className="add">
           <div class= "section">
           <p>
                         <h3>HTML</h3>
@@ -1988,7 +2022,7 @@ size of 13 characters.
 
 
               <footer>
-                <div class="row footer">
+                <div class="row footer" style={{marginLeft:"0%"}}>
                     <h6>Last Updated: Tuesday, January 12, 2021<br />
                       Centre for Development of Advanced Computing (C-DAC Mumbai)</h6>
                 </div>
@@ -2025,8 +2059,8 @@ function QuestionBank()
 
 
 
-    <div className="row container-fluid">
-      <div className="col-2 columnmodific">
+    <div className="container-fluid">
+      <div className="columnmodific">
           <ol>
             <li><a href="#Q1">General Questions about Java</a></li>
 						<li><a href="#Q2">Java Threads</a></li>
@@ -2047,10 +2081,14 @@ function QuestionBank()
               <img alt="cdac-linkedin" src={linkedinicon} width="10%" height="10%" style={{paddingLeft: '2%'}}/>						</a>
 
           <hr/>
+          <button type="button" class="btn btn-primary" style={{marginRight:"3%"}}><Link to="/Login" style={{textDecoration:"none", color:"white"}}>Login</Link></button>
+            <button type="button" class="btn btn-secondary"><Link to="/SignUp" style={{textDecoration:"none", color:"white"}}>SignUp</Link></button>
+
+        <hr/>
           </ol>
       </div>
     
-          <div className="col-10" className="add">
+          <div className="add">
           <div class= "section">
                     <p>
 
@@ -2524,7 +2562,7 @@ function QuestionBank()
     </div>
     {/*====================================================================================================*/}
               <footer>
-                <div class="row footer">
+                <div class="row footer" style={{marginLeft:"0%"}}>
                     <h6>Last Updated: Tuesday, January 12, 2021<br />
                       Centre for Development of Advanced Computing (C-DAC Mumbai)</h6>
                 </div>
@@ -2536,52 +2574,238 @@ function QuestionBank()
 
 function AboutUs()
 {
-      return (<div>
+  return (<div>
+    <div className="row">
+        <div className="col adjustment">
+            <img src={logo} id="logo" />
+            <h1 id="adj">The.Questionary.Stockpile</h1>
+        </div>
+        </div>
+        <div className="row">
+              <div className="container-fluid Topnav">
+                <ul>
+                  <li><Link to="/">Home</Link></li>
+                  <li><Link to="/Java">Java</Link></li>
+                  <li><Link to="/Database">Database</Link></li>
+                  <li><Link to="/WebTechnology">Web Technology</Link></li>
+                  <li><Link to="/QuestionBank">Question Bank</Link></li>
+                  <li><Link to="/AboutUs">AboutUs</Link></li>
+                </ul>
+              </div>
+            </div>
 
+         <section>
 
-        
-<div className="row">
-                        <a name="Q1"></a><div className="col adjustment">
-                            <img src={logo} id="logo" />
-                            <h1 id="adj">The.Questionary.Stockpile</h1>
-                        </div>
-                        </div>
-                        <div className="row">
-                              <div className="container-fluid Topnav">
-                                <ul>
-                                  <li><Link to="/">Home</Link></li>
-                                  <li><Link to="/Java">Java</Link></li>
-                                  <li><Link to="/Database">Database</Link></li>
-                                  <li><Link to="/WebTechnology">Web Technology</Link></li>
-                                  <li><Link to="/QuestionBank">Question Bank</Link></li>
-                                  <li><Link to="/AboutUs">AboutUs</Link></li>
-                                </ul>
-                              </div>
-                            </div>
+         <div className="add" >
+          <div className= "section" style={{marginRight:"37%", textAlign:"center"}}>
 
+            <h3>Rushikesh Joshi</h3> <hr/>
+                Roll No: 200940581025<br/>
+                C-DAC Juhu Mumbai<br/><hr/>
 
+                <a href="https://www.facebook.com/rushikesh.joshi.14268">
+						<img alt="cdac-facebook" src={facebookicon} width="10%" height="10%" style={{paddingLeft: '2%'}}/>
+						</a>
 
-
-
-
-
-        <div className="container">
-          <div class="login-box">
-            <img src={Logo} className="avatar"></img>
-    
-            <h1>Login Here</h1>
-            <form>
-              <p>Username</p>
-              <input type="text" name="username" placeholder="Enter Username" />
-              <p>Password</p>
-              <input type="password" name="password" placeholder="Enter Password" />
-              <input type="text" name="submit" value="submit" />
-              <a href="#">Forget Password</a>
-            </form>
+					<a href="https://www.linkedin.com/in/rushikesh-joshi-268248165/">
+						<img alt="cdac-linkedin" src={linkedinicon} width="10%" height="10%" style={{paddingLeft: '2%'}}/>
+            </a>
+         
           </div>
-        </div>
-        </div>
-  );  
+          </div>
+
+
+          <div className="add" >
+          <div class= "section" style={{marginRight:"37%",  marginTop:"0%", textAlign:"center"}}>
+
+            <h3>Meghna Patil</h3> <hr/>
+            Roll No: 200940381049<br/>
+            C-DAC Khargar Mumbai<br/><hr/>
+
+            <a href="https://www.facebook.com/meghna.patil.39566">
+						<img alt="cdac-facebook" src={facebookicon} width="10%" height="10%" style={{paddingLeft: '2%'}}/>
+						</a>
+					<a href="https://www.linkedin.com/in/meghna-patil-6a5635205/">
+						<img alt="cdac-linkedin" src={linkedinicon} width="10%" height="10%" style={{paddingLeft: '2%'}}/>
+            </a>
+            <hr/>
+         
+          </div>
+          </div>
+
+           
+       
+         </section>
+
+
+  <footer>
+    <div class="row footer" style={{marginLeft:"0%"}}>
+        <h6>Last Updated: Tuesday, January 12, 2021<br />
+          Centre for Development of Advanced Computing (C-DAC Mumbai)</h6>
+    </div>
+  </footer>
+</div>
+  );
+}
+
+
+function Login() {
+      
+  const [user ,setUser]=useState({
+    username:"",
+    password:"",
+
+  });
+  const synchName=(e)=>setUser({...user,username:e.target.value});
+  const synchPass=(e)=>setUser({...user,password:e.target.value});
+  const Btn = () => {
+     
+    if (user.username === "" || user.password === "") {
+      
+      return;
+    }
+  }
+  return (
+    <div>
+    <div className="container">
+      <div class="login-box">
+       
+      <img src={Logo} class="avatar"/>
+        <h1>Login Here</h1>
+        <form>
+          <p>Username</p>
+          <input type="email" name="username" placeholder="Enter Username" minLength="8" maxLength="15" 
+          value={user.username}
+          onChange={synchName} required/>
+          <p>Password</p>
+          <input type="password" id="psw" name="psw" placeholder="Enter Password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+          title="Must contain at least one
+           number and one uppercase and lowercase letter, and at
+           least 8 or more characters"
+           onChange={synchPass}
+           required /> 
+          
+         <button className="bt_n" onClick={Btn}>Log In</button>
+          <a href="#"><b>Forget Password</b></a><br/>
+          <a href="#"><Link to="/" style={{textDecoration:"none", color:"black"}}><b>Go to Home Page</b></Link></a>
+        </form>
+      </div>
+    </div>
+    </div>
+  );
+}
+
+
+function SignUp()
+{
+  const [user ,setUser]= useState({
+    fname:"",
+    lname:"",
+    email:"",
+    male:"",
+    female:"",
+    city:"",
+    country:"",
+    submit:"",
+    
+
+  });
+  const syncFName=(e)=>setUser({...user,fname:e.target.value});
+  const syncLName=(e)=>setUser({...user,lname:e.target.value});
+  const syncEmail=(e)=>setUser({...user,email:e.target.value});
+  const syncCity=(e)=>setUser({...user,city:e.target.value});
+  const syncCon=(e)=>setUser({...user,country:e.target.value});
+ 
+  
+  return(
+    <div >
+     
+     <div className="wrapper">
+	<div className="registration_form">
+		<div className="title">
+    <b>The Questionary Stockpile SignUp</b>
+		</div>
+
+		<form>
+			<div className="form_wrap">
+				<div className="input_grp">
+					<div class="input_wrap">
+						<label for="fname">First Name{" "}</label>
+            <input type="text" id="fname" minLength="3" maxLength="12" 
+         
+             
+            value={user.fname}
+            onChange={syncFName} required
+            placeholder="name"
+            />
+          <div style={{fontSize:12,color:"red"}}>
+            {user.fnameError}</div>  
+					</div>
+					<div className="input_wrap">
+						<label for="lname">Last Name</label>
+            <input type="text" id="lname"  minLength="3" maxLength="12" 
+        
+            value={user.lname}
+            placeholder="surname"
+            onChange={syncLName} required/>
+            
+            <div style={{fontSize:12,color:"red"}}>
+            {user.lnameError}</div>  
+
+					</div>
+				</div>
+				<div className="input_wrap">
+					<label for="email">Email Address</label>
+					<input type="email" id="email" 
+        value={user.email || " "} 
+        onChange={syncEmail} 
+        placeholder="email"
+        required/>
+       <div style={{fontSize:12,color:"red"}}>
+            {user.emailError}</div>  
+
+				</div>
+				<div className="input_wrap" style={{listStyle:'none'}}>
+					<label>Gender</label>
+					<ul>
+						<li style={{listStyleType:"none"}}>
+							<label class="radio_wrap" >
+								<input type="radio" name="gender" value={user.male}  className="input_radio" checked />
+                <span >Male</span>
+							</label>
+						</li>
+						<li  style={{listStyleType:"none"}}>
+							<label className="radio_wrap">
+								<input type="radio" name="gender" value={user.female}  className="input_radio" />
+								<span>Female</span>
+							</label>
+						</li>
+					</ul>
+				</div>
+				<div className="input_wrap">
+					<label for="city">City</label>
+					<input type="text" id="city" 
+          value={user.city}
+          placeholder="enter city name" minLength="3" maxLength="15"
+          onChange={syncCity}/>
+				</div>
+				<div className="input_wrap">
+					<label for="country">Country</label>
+          <input type="text" id="country" value={user.country} 
+           placeholder="enter country name" minLength="3" maxLength="30"
+          onChange={syncCon}/>
+				</div>
+				<div className="input_wrap">
+				<button className="submit_btn"><b>Register Now</b></button>
+        <button className="submit_btn" style={{marginTop:"2%"}}><Link to="/" style={{textDecoration:"none", color:"black"}}><b>Home Page</b></Link></button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+      </div>
+  );
 }
 
 export default App;

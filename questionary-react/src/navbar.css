@@ -59,6 +59,7 @@
     justify-items: left;
     padding-top: 1.5%;
 	color: white;
-	text-shadow: 2px 2px 4px #000000;
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 2rem;
 
 }

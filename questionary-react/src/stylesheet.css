@@ -4,6 +4,7 @@ h5{
 h3{
 	color: crimson;
 }
+
 /* 
 hr{
 	opacity: 100%;
@@ -55,14 +56,15 @@ hr{
 	padding-right: 2%;
 	width:80%;
 	float: right;
+	margin-bottom: 3%;
 }
 
 .footer{
-	margin-top: 4%;
-	padding-left: 30%;
+	justify-content: center;
+	width: 100%;
 	text-align: center;
 	color: white;
 	text-shadow: 2px 2px 4px #000000;
-	display: inline-flex;
 	background-color: #F08080;
+	border-top: 1px outset gray;
 }
