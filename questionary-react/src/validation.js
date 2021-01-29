@@ -5,9 +5,6 @@ export default function validateInfo(username) {
       errors.username ='Username required';
   }
 
-  
-  
-
   //password
   if (!username.password) {
       errors.password = 'Password is required';
